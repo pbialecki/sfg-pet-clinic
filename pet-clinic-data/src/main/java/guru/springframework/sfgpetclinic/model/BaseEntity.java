@@ -3,17 +3,15 @@ package guru.springframework.sfgpetclinic.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.io.Serializable;
 
 /**
  * Created by Paweł on 20.11.2018.
  */
 @Getter
 @Setter
-public class Pet extends BaseEntity{
+public class BaseEntity implements Serializable{
 
-    private PetType petType;
-    private Owner owner;
-    private LocalDate birthDate;
+    private Long id;
 
 }
